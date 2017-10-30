@@ -1,0 +1,13 @@
+PRJ_MMPFILES
+gnumakefile FarmIcons_aif.mk
+gnumakefile sheep.mk
+gnumakefile cow.mk
+gnumakefile pig.mk
+gnumakefile horse.mk
+gnumakefile scene.mk
+gnumakefile fence.mk
+gnumakefile mainmenu.mk
+gnumakefile stopwatch.mk
+gnumakefile menubutton.mk
+gnumakefile scorekeeper.mk
+Farm.mmp

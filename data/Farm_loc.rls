@@ -1,0 +1,11 @@
+// ====================================================================
+// File: Farm_loc.rss
+// Created: 01/16/10
+// Author: Sun Jinbo
+// Copyright (c): Tieto, All rights reserved
+// ====================================================================
+
+rls_string STRING_r_Farm_icon_path "\\resource\\apps\\Farm_icon.mif"
+rls_string STRING_short_caption "Happy Farm"
+rls_string STRING_r_Farm_caption "Happy Farm"
+

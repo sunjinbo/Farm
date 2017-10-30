@@ -1,0 +1,26 @@
+/* ====================================================================
+ * File: Farm.hrh
+ * Created: 01/16/10
+ * Author: Sun Jinbo
+ * Copyright (c): Tieto, All rights reserved
+ * ==================================================================== */
+
+#ifndef __Farm_HRH__
+#define __Farm_HRH__
+
+// Enums
+enum TFarmMenuIds
+    {
+    EFarmMenuStart = 0,
+    EFarmMenuResume,
+    EFarmMenuRestart,
+    EFarmMenuAudioOn,
+    EFarmMenuAudioOff,
+    EFarmMenuRecord,
+    EFarmMenuHelp,
+    EFarmMenuQuit
+    };
+
+#endif // __Farm_HRH__
+
+// End of File

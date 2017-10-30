@@ -1,0 +1,21 @@
+// ====================================================================
+// File: Farm_reg.rss
+// Created: 01/16/10
+// Author: Sun Jinbo
+// Copyright (c): Tieto, All rights reserved
+// ==================================================================== */
+
+//Farm application's registration resource file 
+
+#include <appinfo.rh>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xAFF05676
+
+RESOURCE APP_REGISTRATION_INFO 
+    {
+    app_file="Farm";
+    //
+    localisable_resource_file="\\resource\\apps\\Farm_loc";
+    //
+    }

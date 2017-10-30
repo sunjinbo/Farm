@@ -1,0 +1,25 @@
+// ====================================================================
+// File: Farm_loc.rss
+// Created: 01/16/10
+// Author: Sun Jinbo
+// Copyright (c): Tieto, All rights reserved
+// ==================================================================== */
+
+#include <appinfo.rh>
+#include "Farm.loc"
+
+RESOURCE LOCALISABLE_APP_INFO
+    {
+    short_caption = qtn_farm_short_caption_str;
+    caption_and_icon =
+        {
+        CAPTION_AND_ICON_INFO 
+            {
+            caption = qtn_farm_caption_list;
+            number_of_icons = 1;
+            icon_file = "\\resource\\apps\\Farm_icon.mif";
+            }
+        };
+    }
+
+ // End of File

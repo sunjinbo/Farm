@@ -1,0 +1,83 @@
+// ====================================================================
+// * File: Farm.mmp
+// * Created: 01/16/10
+// * Author: Sun Jinbo
+// * Copyright (c): Tieto, All rights reserved
+// * ====================================================================
+
+CAPABILITY None
+
+TARGET            Farm.exe
+TARGETTYPE        exe
+UID               0x100039CE 0xAFF05676
+
+LANG              SC
+
+SOURCEPATH        ..\src
+SOURCE            Scene.cpp
+SOURCE            Livestock.cpp
+SOURCE            Sheep.cpp
+SOURCE            Cow.cpp
+SOURCE            Pig.cpp
+SOURCE            Horse.cpp
+SOURCE            Fence.cpp
+SOURCE            StoneFence.cpp
+SOURCE            WoodenFence.cpp
+SOURCE            Farm.cpp
+SOURCE            FarmApplication.cpp 
+SOURCE            FarmAppView.cpp
+SOURCE            FarmAppUi.cpp
+SOURCE            FarmDocument.cpp 
+SOURCE            FarmFactory.cpp
+SOURCE            FarmLevel.cpp
+SOURCE            TouchEventFilter.cpp
+SOURCE            EventControl.cpp
+SOURCE            LivestockBuilder.cpp
+SOURCE            Scorekeeper.cpp
+SOURCE            MainMenu.cpp
+SOURCE            MenuButton.cpp
+SOURCE            Rollpacker.cpp
+SOURCE            Stopwatch.cpp
+SOURCE            BmpUtils.cpp
+
+SOURCEPATH        ..\group
+
+USERINCLUDE       ..\inc
+USERINCLUDE       ..\loc
+
+SYSTEMINCLUDE     \epoc32\include
+#if defined ( __S60_50__ )
+SYSTEMINCLUDE     \epoc32\include\middleware
+SYSTEMINCLUDE     \epoc32\include\domain\middleware
+SYSTEMINCLUDE     \epoc32\include\domain\applications
+SYSTEMINCLUDE     \epoc32\include\domain\osextensions
+SYSTEMINCLUDE     \epoc32\include\osextensions
+SYSTEMINCLUDE     \epoc32\include\domain\middleware\loc
+#endif
+
+LIBRARY           euser.lib
+LIBRARY           apparc.lib
+LIBRARY           cone.lib 
+LIBRARY           eikcore.lib  
+LIBRARY           avkon.lib  
+LIBRARY           fbscli.lib
+LIBRARY           bitgdi.lib
+LIBRARY           gdi.lib
+LIBRARY           ws32.lib
+LIBRARY           commonengine.lib
+LIBRARY           bafl.lib
+LIBRARY           aknicon.lib
+
+SOURCEPATH        ..\data
+START RESOURCE    Farm.rss
+HEADER
+TARGETPATH        resource\apps
+END
+
+START RESOURCE    Farm_reg.rss
+TARGETPATH        \private\10003a3f\apps
+END
+
+START RESOURCE    Farm_loc.rss
+TARGETPATH        resource\apps
+END

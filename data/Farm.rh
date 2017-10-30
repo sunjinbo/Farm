@@ -1,0 +1,55 @@
+/* ====================================================================
+ * File: Farm.rh
+ * Created: 01/17/10
+ * Author: Sun Jinbo
+ * Copyright (c): Tieto, All rights reserved
+ * ==================================================================== */
+
+#ifndef FARM_RH
+#define FARM_RH
+
+// INCLUDES
+
+// RESOURCE STRUCTS
+
+STRUCT FARMLEVELARRAY
+    {
+    STRUCT levels[];
+    }
+
+STRUCT FARMLEVEL
+    {
+    LONG id;
+    LONG score;
+    LONG bonus;
+    LONG timeout;
+    STRUCT list[];
+    }
+
+STRUCT FENCEARRAY
+    {
+    STRUCT list[];
+    }
+
+STRUCT FENCE
+    {
+    LONG type;
+    LONG x;
+    LONG y;
+    LONG len;
+    }
+
+STRUCT MAINMENU
+    {
+    STRUCT menuitems[];
+    }
+
+STRUCT MENUITEM
+    {
+    LONG id;
+    LTEXT txt="";
+    }
+
+#endif // FARM_RH
+
+// End of File

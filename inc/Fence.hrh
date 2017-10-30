@@ -1,0 +1,19 @@
+/* ====================================================================
+ * File: Fence.hrh
+ * Created: 01/14/10
+ * Author: Sun Jinbo
+ * Copyright (c): Tieto, All rights reserved
+ * ==================================================================== */
+
+#ifndef __FENCE_HRH__
+#define __FENCE_HRH__
+
+// Enums
+enum TFenceType
+    {
+    EStoneFence = 0,
+    EWoodenFence,
+    EFenceLastElement
+    };
+
+#endif // __FENCE_HRH__

@@ -1,0 +1,349 @@
+// ====================================================================
+// File: Farm.rss
+// Created: 01/16/10
+// Author: Sun Jinbo
+// Copyright (c): Tieto, All rights reserved
+// ==================================================================== */
+
+NAME HELL
+
+#include <eikon.rh>
+#include <eikon.rsg>
+#include <avkon.rh>
+#include <avkon.rsg>
+
+#include "Farm.hrh"
+#include "Farm.rh"
+#include "Farm.loc"
+
+// ---------------------------------------------------------
+//   
+//    Define the resource file signature 
+//    This resource should be empty.
+//
+// ---------------------------------------------------------
+//
+RESOURCE RSS_SIGNATURE { }
+
+// ---------------------------------------------------------
+//   
+//    Default Document Name
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_default_document_name { buf=""; }
+
+// ---------------------------------------------------------
+//   
+//    Define default menu and CBA key.
+//
+// ---------------------------------------------------------
+//
+RESOURCE EIK_APP_INFO
+    {
+    menubar = r_Farm_menubar;
+    cba = R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+
+// ---------------------------------------------------------
+//   
+//   r_Farm_menubar
+//   Menubar for Farm example
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_BAR r_Farm_menubar
+    {
+    titles =
+        {
+        MENU_TITLE 
+            {
+            menu_pane = r_Farm_menu;
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_Farm_menu
+//
+// ---------------------------------------------------------
+//
+RESOURCE MENU_PANE r_Farm_menu
+    {
+    items = 
+        {
+        MENU_ITEM 
+            {
+            command = EAknSoftkeyExit; 
+            txt = qtn_farm_mainmenu_exit;
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_mainmenu_start
+//
+// ---------------------------------------------------------
+//
+RESOURCE MAINMENU r_farm_mainmenu_start
+    {
+    menuitems=
+        {
+        MENUITEM 
+            {
+            id = EFarmMenuStart;
+            txt = qtn_farm_mainmenu_start;
+            },
+        MENUITEM
+            {
+            id = EFarmMenuHelp;
+            txt = qtn_farm_mainmenu_help;
+            },
+        MENUITEM
+            {
+            id = EFarmMenuQuit;
+            txt = qtn_farm_mainmenu_quit;
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_mainmenu_resume
+//
+// ---------------------------------------------------------
+//
+RESOURCE MAINMENU r_farm_mainmenu_resume
+    {
+    menuitems=
+        {
+        MENUITEM 
+            {
+            id = EFarmMenuResume;
+            txt = qtn_farm_mainmenu_resume;
+            },
+        MENUITEM
+            {
+            id = EFarmMenuHelp;
+            txt = qtn_farm_mainmenu_help;
+            },
+        MENUITEM
+            {
+            id = EFarmMenuQuit;
+            txt = qtn_farm_mainmenu_quit;
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_mainmenu_restart
+//
+// ---------------------------------------------------------
+//
+RESOURCE MAINMENU r_farm_mainmenu_restart
+    {
+    menuitems=
+        {
+        MENUITEM 
+            {
+            id = EFarmMenuRestart;
+            txt = qtn_farm_mainmenu_restart;
+            },
+        MENUITEM
+            {
+            id = EFarmMenuHelp;
+            txt = qtn_farm_mainmenu_help;
+            },
+        MENUITEM
+            {
+            id = EFarmMenuQuit;
+            txt = qtn_farm_mainmenu_quit;
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_Farm_levels
+//
+// ---------------------------------------------------------
+//
+RESOURCE FARMLEVELARRAY r_farm_levels
+    {
+    levels = 
+        {
+        FARMLEVEL
+            {
+            id = 1;
+            score = 25;
+            bonus = 10;
+            timeout = 9;
+            list =
+                {
+                FENCE { type = 0; x = 1; y = 0; len = 5; },
+                FENCE { type = 0; x = 3; y = 0; len = 1; },
+                FENCE { type = 0; x = 7; y = 0; len = 1; },
+                FENCE { type = 0; x = 9; y = 0; len = 5; },
+                FENCE { type = 0; x = 5; y = 3; len = 2; },
+                FENCE { type = 0; x = 1; y = 7; len = 4; },
+                FENCE { type = 0; x = 3; y = 7; len = 2; },
+                FENCE { type = 0; x = 7; y = 7; len = 2; },
+                FENCE { type = 0; x = 9; y = 7; len = 4; },
+                FENCE { type = 0; x = 1; y = 13; len = 2;},
+                FENCE { type = 0; x = 3; y = 13; len = 1; },
+                FENCE { type = 0; x = 5; y = 13; len = 2; },
+                FENCE { type = 0; x = 7; y = 13; len = 1; },
+                FENCE { type = 0; x = 9; y = 13; len = 2; },
+                FENCE { type = 0; x = 1; y = 17; len = 1; },
+                FENCE { type = 0; x = 3; y = 17; len = 1; },
+                FENCE { type = 0; x = 5; y = 17; len = 1; },
+                FENCE { type = 0; x = 7; y = 17; len = 1; },
+                FENCE { type = 0; x = 9; y = 17; len = 1; },
+                FENCE { type = 1; x = 3; y = 1; len = 2; },
+                FENCE { type = 1; x = 7; y = 1; len = 2; },
+                FENCE { type = 1; x = 1; y = 5; len = 2; },
+                FENCE { type = 1; x = 5; y = 5; len = 2; },
+                FENCE { type = 1; x = 9; y = 5; len = 2; },
+                FENCE { type = 1; x = 3; y = 9; len = 2; },
+                FENCE { type = 1; x = 7; y = 9; len = 2; },
+                FENCE { type = 1; x = 1; y = 11; len = 2; },
+                FENCE { type = 1; x = 5; y = 11; len = 2; },
+                FENCE { type = 1; x = 9; y = 11; len = 2; },
+                FENCE { type = 1; x = 1; y = 15; len = 2; },
+                FENCE { type = 1; x = 5; y = 15; len = 2; },
+                FENCE { type = 1; x = 9; y = 15; len = 2; }
+                };
+            },
+
+        FARMLEVEL
+            {
+            id = 2;
+            score = 20;
+            bonus = 15;
+            timeout = 3;
+            list =
+                {
+                FENCE { type = 1; x = 1; y = 2; len = 2; },
+                FENCE { type = 0; x = 3; y = 5; len = 3; }
+                };
+            },
+
+        FARMLEVEL
+            {
+            id = 3;
+            score = 20;
+            bonus = 15;
+            timeout = 3;
+            list =
+                {
+                FENCE { type = 1; x = 1; y = 2; len = 2; },
+                FENCE { type = 0; x = 3; y = 5; len = 3; }
+                };
+            }
+        };
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_mainmenu_audio_on
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_mainmenu_audio_on
+    {
+    buf = qtn_farm_mainmenu_audio_on;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_mainmenu_audio_off
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_mainmenu_audio_off
+    {
+    buf = qtn_farm_mainmenu_audio_off;
+    }
+    
+// ---------------------------------------------------------
+//   
+//   r_farm_note_game_over
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_note_game_over
+    {
+    buf = qtn_farm_note_game_over;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_help_title
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_help_title
+    {
+    buf = qtn_farm_help_title;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_help_about
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_help_about
+    {
+    buf = qtn_farm_help_about;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_help_contents
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_help_contents
+    {
+    buf = qtn_farm_help_contents;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_help_caution
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_help_caution
+    {
+    buf = qtn_farm_help_caution;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_stopwatch_level
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_stopwatch_level
+    {
+    buf = qtn_farm_stopwatch_level;
+    }
+
+// ---------------------------------------------------------
+//   
+//   r_farm_stopwatch_timeout
+//
+// ---------------------------------------------------------
+//
+RESOURCE TBUF r_farm_stopwatch_timeout
+    {
+    buf = qtn_farm_stopwatch_timeout;
+    }
+
+// End of File

@@ -1,0 +1,23 @@
+/* ====================================================================
+ * File: Livestock.hrh
+ * Created: 01/14/10
+ * Author: Sun Jinbo
+ * Copyright (c): Tieto, All rights reserved
+ * ==================================================================== */
+
+#ifndef __LIVESTOCK_HRH__
+#define __LIVESTOCK_HRH__
+
+// Enums
+enum TLivestockType
+    {
+    ESheepType = 0,
+    ECowType,
+    EPigType,
+    EHorseType,
+    ELivestockLastElement
+    };
+
+#endif // __LIVESTOCK_HRH__
+
+// End of File
